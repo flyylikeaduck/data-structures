@@ -17,18 +17,18 @@ treeMethods.addChild = function(value) {
 };
 
 treeMethods.contains = function(target) {
- var childArr = this.children;
- var result = false;
- 
- if (this.value === target) {
-  result = true;
- }
- 
- childArr.forEach(function(childObj) {
-  if (childObj.contains(target)) {
+  var childArr = this.children;
+  var result = false; 
+  
+  if (this.value === target) {
     result = true;
   }
- });
+ 
+  childArr.forEach(function(childObj) {
+    if (childObj.contains(target)) {
+      result = true;
+    }
+  });
  
   return result;
   
